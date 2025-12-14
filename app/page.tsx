@@ -1,6 +1,8 @@
+"use client";
+
 import { motion } from "framer-motion";
 
-export default function YanXueYuInstitute() {
+export default function HomePage() {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-800">
       {/* Header */}
@@ -8,16 +10,16 @@ export default function YanXueYuInstitute() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <h1 className="text-2xl font-bold tracking-wide">年学语研究院</h1>
           <nav className="space-x-6 text-sm">
-            <a className="hover:text-blue-600" href="#about">
+            <a href="#about" className="hover:text-blue-600">
               研究院概况
             </a>
-            <a className="hover:text-blue-600" href="#research">
+            <a href="#research" className="hover:text-blue-600">
               研究方向
             </a>
-            <a className="hover:text-blue-600" href="#team">
+            <a href="#team" className="hover:text-blue-600">
               研究团队
             </a>
-            <a className="hover:text-blue-600" href="#contact">
+            <a href="#contact" className="hover:text-blue-600">
               联系我们
             </a>
           </nav>
@@ -30,12 +32,14 @@ export default function YanXueYuInstitute() {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="text-4xl font-bold mb-6"
           >
             面向未来的语言与教育研究平台
           </motion.h2>
           <p className="max-w-3xl mx-auto text-lg mb-8">
-            年学语研究院致力于语言教育、核心素养与学习科学的交叉研究，推动理论创新与教育实践深度融合。
+            年学语研究院致力于语言教育、核心素养与学习科学的交叉研究，
+            推动理论创新与教育实践的深度融合。
           </p>
           <button className="px-6 py-3 rounded-2xl bg-white/10 hover:bg-white/20 border border-white/20">
             了解更多
@@ -48,17 +52,19 @@ export default function YanXueYuInstitute() {
         <motion.h3
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
           className="text-3xl font-semibold mb-10 text-center"
         >
           研究院概况
         </motion.h3>
         <p className="max-w-4xl mx-auto leading-relaxed text-center">
-          年学语研究院聚焦基础教育与高等教育中的语言发展问题，以学科融合为路径，构建面向真实课堂与真实学习情境的研究体系。
+          年学语研究院聚焦基础教育与高等教育中的语言发展问题，
+          以学科融合为研究路径，构建面向真实课堂与真实学习情境的研究体系。
           研究成果服务于教师专业发展、课程改革与学生核心能力提升。
         </p>
       </section>
 
-      {/* Research Directions */}
+      {/* Research */}
       <section id="research" className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <h3 className="text-3xl font-semibold mb-12 text-center">研究方向</h3>
@@ -67,14 +73,15 @@ export default function YanXueYuInstitute() {
               "语言习得与核心素养",
               "课程与教学策略研究",
               "教育评价与学习支持系统",
-            ].map((item, idx) => (
-              <div key={idx} className="rounded-2xl bg-white shadow-md">
-                <div className="p-6">
-                  <h4 className="font-semibold text-lg mb-2">{item}</h4>
-                  <p className="text-sm text-gray-600">
-                    围绕该方向开展系统研究，形成可推广的理论模型与实践范式。
-                  </p>
-                </div>
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="rounded-2xl bg-white shadow-md p-6"
+              >
+                <h4 className="font-semibold text-lg mb-2">{item}</h4>
+                <p className="text-sm text-gray-600">
+                  围绕该方向开展系统研究，形成可推广的理论模型与实践范式。
+                </p>
               </div>
             ))}
           </div>
@@ -89,15 +96,16 @@ export default function YanXueYuInstitute() {
             "语言教育研究员",
             "课程与教学专家",
             "教育评估与数据分析专家",
-          ].map((role, idx) => (
-            <div key={idx} className="rounded-2xl bg-white shadow-md">
-              <div className="p-6 text-center">
-                <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gray-200" />
-                <h4 className="font-semibold">{role}</h4>
-                <p className="text-sm text-gray-600 mt-2">
-                  长期从事相关领域研究与一线实践。
-                </p>
-              </div>
+          ].map((role, index) => (
+            <div
+              key={index}
+              className="rounded-2xl bg-white shadow-md p-6 text-center"
+            >
+              <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gray-200" />
+              <h4 className="font-semibold">{role}</h4>
+              <p className="text-sm text-gray-600 mt-2">
+                长期从事相关领域研究与一线实践。
+              </p>
             </div>
           ))}
         </div>
