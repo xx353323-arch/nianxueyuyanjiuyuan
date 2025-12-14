@@ -1,5 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
 export default function YanXueYuInstitute() {
@@ -10,10 +8,18 @@ export default function YanXueYuInstitute() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <h1 className="text-2xl font-bold tracking-wide">年学语研究院</h1>
           <nav className="space-x-6 text-sm">
-            <a className="hover:text-blue-600" href="#about">研究院概况</a>
-            <a className="hover:text-blue-600" href="#research">研究方向</a>
-            <a className="hover:text-blue-600" href="#team">研究团队</a>
-            <a className="hover:text-blue-600" href="#contact">联系我们</a>
+            <a className="hover:text-blue-600" href="#about">
+              研究院概况
+            </a>
+            <a className="hover:text-blue-600" href="#research">
+              研究方向
+            </a>
+            <a className="hover:text-blue-600" href="#team">
+              研究团队
+            </a>
+            <a className="hover:text-blue-600" href="#contact">
+              联系我们
+            </a>
           </nav>
         </div>
       </header>
@@ -29,10 +35,11 @@ export default function YanXueYuInstitute() {
             面向未来的语言与教育研究平台
           </motion.h2>
           <p className="max-w-3xl mx-auto text-lg mb-8">
-            年学语研究院致力于语言教育、核心素养与学习科学的交叉研究，
-            推动理论创新与教育实践深度融合。
+            年学语研究院致力于语言教育、核心素养与学习科学的交叉研究，推动理论创新与教育实践深度融合。
           </p>
-          <Button size="lg" className="rounded-2xl">了解更多</Button>
+          <button className="px-6 py-3 rounded-2xl bg-white/10 hover:bg-white/20 border border-white/20">
+            了解更多
+          </button>
         </div>
       </section>
 
@@ -46,8 +53,7 @@ export default function YanXueYuInstitute() {
           研究院概况
         </motion.h3>
         <p className="max-w-4xl mx-auto leading-relaxed text-center">
-          年学语研究院聚焦基础教育与高等教育中的语言发展问题，
-          以学科融合为路径，构建面向真实课堂与真实学习情境的研究体系。
+          年学语研究院聚焦基础教育与高等教育中的语言发展问题，以学科融合为路径，构建面向真实课堂与真实学习情境的研究体系。
           研究成果服务于教师专业发展、课程改革与学生核心能力提升。
         </p>
       </section>
@@ -62,14 +68,14 @@ export default function YanXueYuInstitute() {
               "课程与教学策略研究",
               "教育评价与学习支持系统",
             ].map((item, idx) => (
-              <Card key={idx} className="rounded-2xl shadow-md">
-                <CardContent className="p-6">
+              <div key={idx} className="rounded-2xl bg-white shadow-md">
+                <div className="p-6">
                   <h4 className="font-semibold text-lg mb-2">{item}</h4>
                   <p className="text-sm text-gray-600">
                     围绕该方向开展系统研究，形成可推广的理论模型与实践范式。
                   </p>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -84,15 +90,15 @@ export default function YanXueYuInstitute() {
             "课程与教学专家",
             "教育评估与数据分析专家",
           ].map((role, idx) => (
-            <Card key={idx} className="rounded-2xl">
-              <CardContent className="p-6 text-center">
+            <div key={idx} className="rounded-2xl bg-white shadow-md">
+              <div className="p-6 text-center">
                 <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gray-200" />
                 <h4 className="font-semibold">{role}</h4>
                 <p className="text-sm text-gray-600 mt-2">
                   长期从事相关领域研究与一线实践。
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
       </section>
